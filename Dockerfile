@@ -24,4 +24,7 @@ RUN apt-get update \
 # Expose the default port
 EXPOSE 80 443
 
-# command: /bin/bash -c "envsubst < /etc/nginx/conf.d/site.tpl > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+VOLUME ["/app/,"/etc/nginx/"]
+
+WORKDIR /app/
+
