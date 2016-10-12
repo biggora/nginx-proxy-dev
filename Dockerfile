@@ -5,7 +5,7 @@
 ############################################################
 
 # Set the base image to Ubuntu
-FROM nginx:1.11
+FROM nginx:1.11.3
 
 # File Author / Maintainer
 MAINTAINER Alexey Gordeyev <aleksej@gordejev.lv>
@@ -24,7 +24,7 @@ RUN apt-get update \
 # Expose the default port
 EXPOSE 80 443
 
-VOLUME ["/app/,"/etc/nginx/"]
+VOLUME ["/app/","/etc/nginx/"]
 
 WORKDIR /app/
 
