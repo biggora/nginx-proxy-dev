@@ -25,7 +25,7 @@ RUN apt-get update \
 # Expose the default port
 EXPOSE 80 443
 
-VOLUME ["/app/","/etc/nginx/"]
+VOLUME ["/app/","/etc/nginx/conf.d/"]
 
 WORKDIR /app/
 
