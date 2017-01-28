@@ -1,13 +1,8 @@
 ## Introduction
 This is a Dockerfiles to build a container images for dev purpose. 
-The container includes nodejs 4.x.
+The container includes nginx 1.x.
 Based on Alpine 3.4
 
-## NPM Modules
-istalled as global
-```
-   nodeunit bower gulp jshint mocha istanbul should chai apidoc makedoc
-```
 
 ## Git reposiory
 The source files for this project can be found here: [Docker Images on Git](https://github.com/biggora/gitlab-zone)
