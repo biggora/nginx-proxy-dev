@@ -16,7 +16,7 @@ ENV WEB_ALIAS_DOMAIN   *.vm
 
 # Install wget and install/updates certificates
 RUN apk update && apk upgrade && \
-    apk add --no-cache bash git curl wget python imagemagick && \
+    apk add --no-cache bash && \
     rm -rf /var/cache/apk/*
 
 # RUN rm -rf /etc/nginx
