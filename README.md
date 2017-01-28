@@ -17,5 +17,18 @@ Pull the image from the docker index rather than downloading the git repo.
 This prevents you having to build the image on every docker host.
 
 ```
-  docker pull biggora/gitlab-zone
+  docker pull biggora/nginx-proxy-dev
+```
+
+```
+ngx_http_geoip_module-debug.so
+ngx_http_geoip_module.so
+ngx_http_image_filter_module-debug.so
+ngx_http_image_filter_module.so
+ngx_http_perl_module-debug.so
+ngx_http_perl_module.so
+ngx_http_xslt_filter_module-debug.so
+ngx_http_xslt_filter_module.so
+ngx_stream_geoip_module-debug.so
+ngx_stream_geoip_module.so
 ```
