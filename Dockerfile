@@ -1,11 +1,11 @@
 ############################################################
 # Dockerfile to build container for Tests
-# Based on Debian
+# Based on Alpine
 # include NGINX
 ############################################################
 
-# Set the base image to Ubuntu
-FROM nginx:1.11.3
+# Set the base image to Alpine
+FROM nginx:alpine
 
 # File Author / Maintainer
 MAINTAINER Alexey Gordeyev <aleksej@gordejev.lv>
@@ -15,12 +15,10 @@ ENV WEB_DOCUMENT_INDEX index.html
 ENV WEB_ALIAS_DOMAIN   *.vm
 
 # Install wget and install/updates certificates
-RUN apt-get update \
- && apt-get install -y -q --no-install-recommends \
-    ca-certificates wget curl \
- && apt-get clean \
- && rm -r /var/lib/apt/lists/* \
- && ls /etc/nginx
+RUN apk update && apk upgrade && \
+    apk add --no-cache bash git curl wget python imagemagick && \
+    rm -rf /var/cache/apk/* && \
+    ls /etc/nginx
 
 # Expose the default port
 EXPOSE 80 443
