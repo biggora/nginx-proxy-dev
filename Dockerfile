@@ -23,7 +23,7 @@ RUN apk update && apk upgrade && \
 RUN rm /etc/nginx/*.conf && \
     rm /etc/nginx/*_params && \
     rm /etc/nginx/*.default && \
-    rm /etc/nginx/conf.d/* &&
+    rm /etc/nginx/conf.d/*
 
 COPY ./conf /etc/nginx
 COPY ./html /var/www/html
