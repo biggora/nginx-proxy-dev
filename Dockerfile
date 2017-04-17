@@ -10,7 +10,7 @@ FROM nginx:alpine
 # File Author / Maintainer
 MAINTAINER Alexey Gordeyev <aleksej@gordejev.lv>
 
-ENV WEB_DOCUMENT_ROOT  /app/
+ENV WEB_DOCUMENT_ROOT  /var/www/html/
 ENV WEB_DOCUMENT_INDEX index.html
 ENV WEB_ALIAS_DOMAIN   *.vm
 
@@ -31,7 +31,7 @@ COPY ./html /var/www/html
 # Expose the default port
 EXPOSE 80 443
 
-VOLUME ["/app/","/etc/nginx/conf.d/", "/etc/nginx/snippets/", "/etc/nginx/upstreams/"]
+VOLUME ["/var/www/html/","/etc/nginx/conf.d/", "/etc/nginx/snippets/", "/etc/nginx/upstreams/"]
 
-WORKDIR /app/
+WORKDIR /var/www/html/
 
