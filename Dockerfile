@@ -5,7 +5,7 @@
 ############################################################
 
 # Set the base image to Alpine
-FROM nginx:alpine
+FROM nginx:alpine-perl
 
 # File Author / Maintainer
 MAINTAINER Alexey Gordeyev <aleksej@gordejev.lv>
@@ -31,7 +31,7 @@ COPY ./html /var/www/html
 # Expose the default port
 EXPOSE 80 443
 
-VOLUME ["/var/www/html/","/etc/nginx/conf.d/", "/etc/nginx/snippets/", "/etc/nginx/upstreams/"]
+VOLUME ["/var/www/html/", "/etc/nginx/vhosts/","/etc/nginx/conf.d/", "/etc/nginx/snippets/", "/etc/nginx/upstreams/", "/var/log/nginx/"]
 
 WORKDIR /var/www/html/
 
