@@ -5,7 +5,7 @@
 ############################################################
 
 # Set the base image to Alpine
-FROM nginx:alpine
+FROM nginx:alpine-perl
 
 # File Author / Maintainer
 MAINTAINER Alexey Gordeyev <aleksej@gordejev.lv>
